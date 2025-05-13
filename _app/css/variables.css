@@ -1,0 +1,29 @@
+/* :root {
+	--primary: #ffffff;
+	--secondary: #ebcb4c;
+	--tertiary: #2a4c11;
+	--quaternary: #FF6B00;
+	--quinary: #f1f171;
+	--senary: rgb(248, 238, 238);
+	--septenary: #ff9900;
+
+	--logo-font: 'Roboto', sans-serif;
+	--font-h1:'Roboto', sans-serif; 
+	--font-h3:'Roboto', sans-serif;
+	--donate-font: 'Lilita One', sans-serif;
+} */
+
+:root {
+	--primary: #ecd9d936;         /* Clean white background */
+	--secondary: #fffcf8;       /* Light peach for sections */
+	--tertiary: #8f702e;        /* Calming green for trust and care */
+	--quaternary: #38a317;      /* Coral for call-to-action */
+	--quinary: #FFF8DC;         /* Soft cream background for contrast */
+	--senary: #F5F5F5;          /* Subtle gray for cards and borders */
+	--septenary: #FFB74D;       /* Warm orange for buttons and icons */
+
+	--logo-font: 'Poppins', sans-serif;
+	--font-h1: 'Poppins', sans-serif;
+	--font-h3: 'Poppins', sans-serif;
+	--donate-font: 'Baloo 2', cursive;
+}

@@ -1,0 +1,50 @@
+.donate__container {
+   display: flex;
+   flex-direction: column;
+   margin: 0 auto;
+   justify-content: center;
+}
+
+.donate__number {
+   margin: 2rem auto;
+   font-size: x-large;
+   color: var(--tertiary);
+}
+
+.donate__shop {
+   margin: 2rem auto;
+   text-decoration: none;
+   color: var(--tertiary);
+   font-size: x-large;
+}
+
+.donate__shop:hover {
+   color: var(--quaternary);
+}
+
+.donate__image {
+	display: block;
+	margin: 2rem auto 5rem auto;
+	width: 30%;
+	min-width: 400px;
+	align-items: center;
+	border-radius: 20px;
+	box-shadow: 0 5px 10px var(--tertiary);
+}
+
+@media screen and (max-width: 768px) {
+	.donate__image {
+		width: 95%;
+		min-width: 10rem;
+		border-radius: 5px;
+	}
+
+	.donate__container {
+		width: 100%;
+	}
+
+   .donate__number,
+   .donate__shop {
+		padding: 0 1.5rem;
+   }
+ }

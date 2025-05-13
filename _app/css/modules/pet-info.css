@@ -1,0 +1,174 @@
+.pet-info	{
+	position: relative;
+}
+
+.pet-info__back {
+	position: absolute;
+	top: 7.5rem;
+	left: 5rem;
+	text-transform: uppercase;
+	color: var(--tertiary);
+}
+
+.pet-info__back:hover {
+	color: var(--quaternary);
+}
+
+.pet-info__card {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto 5rem auto;
+	justify-content: center;
+	color: var(--tertiary);
+}
+
+.pet-info__image-and-sound {
+	position: relative;
+	width: 40%;
+	margin: 0 auto;
+	padding-top: 1rem;
+	justify-content: center;
+}
+
+.pet-info__image {
+	margin: 1rem auto;
+	width: 100%;
+	border: 0.5rem solid var(--quinary);
+	box-shadow: 6px 8px 10px var(--tertiary);
+}
+
+.pet-info__sound {
+	position: absolute;
+	bottom: 2.5rem;
+	right: 1.3rem;
+	width: 8vw;
+	height: 8vw;
+	background: rgb(255, 208, 0);
+	border-radius: 10rem;
+	font-size: 1.6vw;
+	font-weight: bold;
+	color: var(--tertiary);
+	border:none;
+	box-shadow: 2px 4px 0 var(--tertiary);
+	transform: rotate(-5deg);
+	transition: transform 0.4s ease-in-out;
+	transition-delay: 0.1s;
+}
+
+.pet-info__sound:hover {
+	background: var(--quaternary);
+	color: var(--quinary);
+	transform: rotate(5deg);
+}
+
+.pet-info__info-and-description {
+	margin: 3rem auto;
+	padding: 2rem;
+	border: 1px solid var(--tertiary);
+	border-radius: 1rem;
+	box-shadow: 3px 5px 10px var(--tertiary);
+	width: 80%;
+}
+
+.pet-info__info {
+	display: grid;
+	list-style: none;
+	margin: 2rem auto;
+	padding: 2rem;
+	width: 100%;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(auto, 1fr);
+}
+
+.pet-info__breed,
+.pet-info__age,
+.pet-info__size,
+.pet-info__sex,
+.pet-info__live-with-dogs,
+.pet-info__live-with-cats,
+.pet-info__live-with-birds,
+.pet-info__live-with-bunnies,
+.pet-info__live-with-children,
+.pet-info__ideal-home {
+	font-size: 1.2rem;
+	margin: 0.5rem;
+}
+
+.pet-info__about {
+	margin: 0 auto;
+	padding: 0 2rem;
+	width: 100%;
+}
+
+.pet-info__description {
+	margin: 0 auto 2rem auto;
+	padding: 1rem 2rem 2rem 2rem;
+	font-size: 1.2rem;
+	width: 100%;
+}
+
+@media screen and (max-width: 1010px) {
+	.pet-info__image-and-sound {
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.pet-info__back {
+		top: 8.5rem;
+		left: 2rem;
+	}
+
+	.pet-info__card {
+		width: 100%;
+	}
+
+	.pet-info__image-and-sound {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.pet-info__image {
+		width: 100%;
+	}
+
+	.pet-info__sound {
+		width: 25vw;
+		height: 25vw;
+		font-size: 5vw;
+		transform: none;
+		transition: none;
+		transition-delay: none;
+	}
+
+	.pet-info__sound:hover {
+		background: rgb(255, 208, 0);
+		color: var(--tertiary);
+		transform: none;
+	}
+
+	.pet-info__info-and-description {
+		margin: 1rem auto;
+		width: 95%;
+		padding: 1rem;
+	}
+
+	.pet-info__about {
+		width: 90%;
+		margin: 0 auto;
+		padding: 1rem 0 0 0;
+	}
+
+	.pet-info__info,
+	.pet-info__description {
+		margin: 0 auto;
+		padding: 1rem 0 4rem 0;
+		width: 90%;
+	}
+
+	.pet-info__info {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 2rem;
+	}
+}

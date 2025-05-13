@@ -1,0 +1,137 @@
+.main__link {
+   display: flex;
+   margin: 0 auto;
+	padding: 0 1rem;
+   justify-content: center;
+   width: auto;
+   text-decoration: none;
+   font-size: 1.5rem;
+   color: var(--tertiary);
+   /* padding: 1rem;
+   border: 1px solid var(--tertiary);
+   border-radius: 1rem;
+   box-shadow: 0 2px 4px var(--primary); */
+}
+
+.main__slideshow {
+	position: relative;
+	margin: 3rem auto 5rem auto;
+	width: 95%;
+	max-width: 60rem;
+	height: 90vh;
+	background: var(--primary);
+	color: var(--tertiary);
+   border-radius: 1rem;
+	box-shadow: 0 4px 10px var(--tertiary);
+}
+
+.main__slideshow-slide {
+	position: absolute;
+	top: -2rem;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.main__slideshow-slide--active {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main__slideshow-slide-image {
+	width: 70%;
+	height: 60%;
+	object-fit: cover;
+	border-radius: 0.5rem;
+	border: 1rem solid var(--quinary);
+}
+
+.main__slideshow-slide-caption {
+	position: absolute;
+	bottom: 5rem;
+	left: 50%;
+	transform: translate(-50%);
+	width: 70%;
+   font-size: 1.2rem;
+}
+
+.main__slideshow-controls {
+	position: relative;
+	z-index: 10;
+	height: 100%;
+}
+
+.main__slideshow-next-button {
+	position: absolute;
+	top: 50%;
+	right: 0;
+   margin: 0 2rem;
+   width: 4rem;
+	transform: translateY(-50%);
+	background: transparent;
+	border: none;
+}
+
+.main__slideshow-next-button img {
+	max-width: 6vw;
+}
+
+
+.main__slideshow-previous-button {
+	position: absolute;
+	top: 50%;
+	left: 0;
+   margin: 0 2rem;
+   width: 4rem;
+	transform: translateY(-50%);
+	background: transparent;
+	border: none;
+}
+
+.main__slideshow-previous-button img {
+	max-width: 6vw;
+}
+
+@media screen and (max-width: 768px) {
+	.main__link {
+		width: 95%;
+	}
+
+	.main__slideshow {
+		display: block;
+		margin: 3rem auto 5rem auto;
+		background: none;
+		box-shadow: none;
+		height: 100%;
+	}
+	
+	.main__slideshow-slide {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		margin: 1rem auto;
+	}
+
+	.main__slideshow-slide-image {
+		width: 100%;
+		border: none;
+		margin: 2rem auto;
+	}
+
+	.main__slideshow-slide-caption {
+		position: relative;
+		margin: 1rem auto;
+		bottom: 1rem;
+		left: 0;
+		transform: translate(0%);
+		width: 95%;
+		text-align: left;
+	}
+
+	.main__slideshow-controls {
+		display: none;
+	}
+}

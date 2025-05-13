@@ -1,0 +1,225 @@
+.navbar {
+	display: flex;
+	position: sticky;
+	top: 0;
+	margin: 0 auto;
+	background: var(--primary);
+	align-items: center;
+	justify-content:flex-start;
+	width: 100%;
+	box-shadow: 0 1px 6px var(--tertiary);
+	z-index: 20;
+	font-size: 20px;
+}
+
+.navbar__logo {
+	margin: 4rem auto;
+	cursor: pointer;
+}
+
+.navbar__logo a {
+	padding: 2rem 0.3rem;
+	text-decoration: none;
+	color: var(--tertiary);
+	border: 0.2rem solid var(--tertiary);
+	border-radius: 10rem;
+	font-family: var(--logo-font);
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+
+.navbar__logo a:hover {
+	color: var(--quinary);
+	border: 0.2rem solid var(--quinary);
+	transition: ease-in-out 0.3s;
+}
+
+.navbar__mobile-menu-icon {
+	display: none;
+}
+
+.navbar__menu {
+	display: flex;
+	margin: 0 auto;
+	width: 100%;
+	list-style: none;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.navbar__menu-link {
+	margin: 2vw;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.navbar__menu-link a {
+	text-decoration: none;
+	color: var(--tertiary);
+	font-family: var(--logo-font);
+}
+
+.navbar__menu-link a:hover {
+	color: var(--quinary);
+	transition: ease-in-out 0.3s;
+	text-shadow: 0 1px 2px var(--tertiary);
+}
+
+.navbar__menu-link:hover .navbar__submenu {
+	display: flex;
+	flex-direction: column;
+}
+
+.navbar__submenu {
+	display: none;
+	padding: 0.5rem;
+	width: 18rem;
+	position: absolute;
+	list-style: none;
+	background: var(--primary);
+	border-radius: 0.5rem;
+	z-index: 30;
+}
+
+.navbar__submenu-link {
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: 1rem;
+}
+
+.navbar__submenu-link a {
+	padding: 1rem 2rem 1rem 0;
+}
+
+.navbar__submenu-link:hover {
+	border: 1px solid var(--tertiary);
+	border-radius: 0.5rem;
+	box-shadow: 0 2px 2px var(--tertiary);
+	background: var(--secondary);
+}
+
+.navbar__submenu-link a:hover {
+	color: var(--tertiary);
+	text-shadow: none;
+}
+
+.navbar__menu-donate {
+	margin: 2rem auto;
+	padding: 1rem 1.5rem;
+	font-family: var(--donate-font);
+	font-size: 1.4rem;
+	font-weight: 400;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--tertiary);
+	background: #ffd000;
+	border-radius: 3rem;
+	box-shadow: 0 3px 5px var(--tertiary);
+	cursor: pointer;
+	transition: color ease-in-out 0.2s;
+}
+
+.navbar__menu-donate:hover {
+	background: var(--quaternary);
+	color: var(--quinary);
+}
+
+/* Media queries */
+@media screen and (max-width: 1030px) {
+	.navbar__menu-link {
+		font-size: 1.1rem;
+	}
+
+	.navbar__menu-donate {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 910px) {
+	.navbar__mobile-menu-icon {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 auto;
+		background: none;
+		border: none;
+	}
+
+	.navbar__mobile-menu-icon-top,
+	.navbar__mobile-menu-icon-middle,
+	.navbar__mobile-menu-icon-bottom {
+		width: 5rem;
+		height: 0.4rem;
+		margin: 0.4rem 0;
+		background: var(--tertiary);
+		border-radius: 1rem;
+	}
+
+	.navbar__menu {
+		display: none;
+		width: 100vw;
+		left: 0;
+		background: var(--primary);
+		padding: 1rem 0 1rem 20rem;
+		justify-content:left;
+	}
+
+	.navbar__menu--visible {
+		display: flex;
+		position: absolute;
+		flex-direction: column;
+		margin: 0 auto;
+		padding: 2rem;
+		margin-top: 4rem;
+		z-index: 40;
+	}
+
+	.navbar__menu-link {
+		padding: 1rem;
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.navbar__menu-link:hover {
+		border: 1px solid var(--tertiary);
+		border-radius: 1rem;
+		background-color: var(--secondary);
+	}
+
+	.navbar__menu-link a:hover {
+		color: var(--tertiary);
+		text-shadow: none;
+	}
+
+	.navbar__menu-link:hover .navbar__submenu {
+		display: none;
+	}
+
+	.navbar__menu-donate {
+		width: 30vw;
+		text-align: center;
+		font-size: 1.4rem;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.navbar__logo a {
+		margin: 0.5rem;
+		font-size: 1rem;
+		padding: 1.6rem 0.3rem;
+	}
+
+	.navbar__menu-donate {
+		font-size: 1rem;
+		padding: 1rem 0;
+	}
+
+	.navbar__mobile-menu-icon-top,
+	.navbar__mobile-menu-icon-middle,
+	.navbar__mobile-menu-icon-bottom {
+		width: 3rem;
+		height: 0.3rem;
+		margin: 0.3rem 0;
+	}
+}
