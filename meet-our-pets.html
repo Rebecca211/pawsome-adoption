@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet Our Pets - PawSome</title>
+  <link rel="stylesheet" href="../_app/css/main.css" />
+  <style>
+    .pet-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .pet-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .pet-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .pet-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .pet-card h3 {
+      margin: 1rem 0 0.5rem;
+      color: #2d3748;
+    }
+
+    .pet-card p {
+      color: #718096;
+      font-size: 0.95rem;
+    }
+
+    .pet-card__btn {
+      background-color: #38a169;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 1rem 0;
+      display: inline-block;
+    }
+
+    .more-btn {
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+
+    .more-btn a {
+      background: #2b6cb0;
+      color: white;
+      padding: 0.75rem 2rem;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+    }
+
+    .more-btn a:hover {
+      background-color: #2c5282;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar__logo"><a href="../index.html">🐾 PawSome</a></div>
+    <nav class="navbar__items">
+      <ul class="navbar__menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pets">
+    <section class="hero">
+      <h1 class="hero__title">Meet Our Pets</h1>
+      <p class="hero__subtitle">Find your new best friend today! All pets are vaccinated, loved, and ready for a new home.</p>
+    </section>
+
+    <section class="pet-cards">
+      <div class="pet-card">
+        <img src="./_app/assets/images/chris-boyer-AtYvCtDcwn0-unsplash.jpg" alt="Luna the Golden Retriever" />
+        <h3>Miya and Jina</h3>
+        <p>Golden and black cat · 2 years · Female</p>
+     <a href="adopt.html?pet=Luna" class="pet-card__btn">Adopt Me</a>
+<a href="bio-miya-jina.html" class="pet-card__btn bio-btn">Read Bio</a>
+
+
+      </div>
+      <div class="pet-card">
+        <img src="./_app/assets/images/dog-Jan.jpg" alt="Max the Beagle" />
+        <h3>Max</h3>
+        <p>Beagle · 3 years · Male</p>
+     <a href="adopt.html?pet=Luna" class="pet-card__btn">Adopt Me</a>
+<a href="bio-whisker.html" class="pet-card__btn bio-btn">Read Bio</a>      </div>
+      <div class="pet-card">
+        <img src="./_app/assets/images/raychan-KbiV1er60Wk-unsplash.jpg" alt="Whiskers the Cat" />
+        <h3>Whiskers</h3>
+        <p>Tabby Cat · 1.5 years · Female</p>
+<a href="adopt.html?pet=Whisker" class="pet-card__btn">Adopt Me</a>
+<a href="bio-whisker.html" class="pet-card__btn bio-btn">Read Bio</a>      </div>
+    </section>
+
+    <div class="more-btn">
+      <a href="#">More Pets</a>
+    </div>
+  </main>
+
+ <div id="footer-placeholder"></div>
+<script>
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+</body>
+</html>
