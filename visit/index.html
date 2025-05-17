@@ -1,221 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visit Us - PawSome</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fefcf9;
+      color: #333;
+    }
+header {
+  background-size: contain;
+  height: auto;
+  padding: 3rem 0;
+  color: rgba(81, 228, 101, 0.836);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f9f6f6; /* fallback to help visibility */
+}
 
-		<title>PawSome - Pet Adoption</title>
+    header h1 {
+      font-size: 2rem;
+      margin: 2;
+      animation-fill-mode: backwards;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    }
+    h2 {
+      color: #2d3748;
+      margin-top: 1.5rem;
+    }
+    p {
+      line-height: 1.6;
+      color: #4a5568;
+    }
+    .info-box {
+      background: #f0fff4;
+      border-left: 5px solid #38a169;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+    .map {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+    }
+    .contact {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e2e8f0;
+    }
+    .hours {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .hours span {
+      display: block;
+    }
+  </style>
+</head>
+<body>
 
-		<meta name="description" content="Website for PawSome - pet adoption - all pets">
+  <header>
+    <h1>Plan Your Visit to PawSome 🐾</h1>
+  </header>
 
-		<link rel="stylesheet" href="../_app/css/main.css">
-		<script type="module" src="../_app/js/main.js"></script>
-	</head>
-	
-	<body>
-		<header>
-			<nav 
-				id="top" 
-				class="navbar"> <!-- to top button id -->
-				<div 
-					class="navbar__logo"
-					title="PawSome - pet adoption">
-					<a href="/index.html">PawSome</a>
-				</div>
+  <main>
+    <p>
+      Visiting PawSome is a joyful and uplifting experience for the whole family. Whether you're coming to adopt a new friend, 
+      spend time with animals, or explore how you can help, we welcome you with open arms and wagging tails.
+    </p>
 
-				<section class="navbar__items">
-					<ul class="navbar__menu">
-						<li class="navbar__menu-link">
-							<a href="/about/">
-								About
-							</a>
-						</li>
+    <div class="info-box">
+      🐶 Come meet our adoptable pets, tour our facility, and learn how we rescue, rehabilitate, and rehome.
+    </div>
 
-						<!-- Adopt dropdown starts here -->
+    <h2>Location</h2>
+    <p>123 PawSome Lane, Happy Tails City, VIC 3000</p>
 
-						<li class="navbar__menu-link">
-							<a href="../adopt/">
-								Adopt
-							</a>
-							<ul class="navbar__submenu">
-								<li class="navbar__submenu-link">
-									<a href="/dogs/">
-										Dogs
-									</a>
-								</li>
-								<li class="navbar__submenu-link">
-									<a href="/cats/">
-										Cats
-									</a>
-								</li>
-								<li class="navbar__submenu-link">
-									<a href="/birds/">
-										Birds
-									</a>
-								</li>
-								<li class="navbar__submenu-link">
-									<a href="/bunnies/">
-										Bunnies
-									</a>
-								</li>
-								<li class="navbar__submenu-link">
-									<a href="/other/">
-										Other
-									</a>
-								</li>
-							</ul>
-						</li>
+    <iframe
+      class="map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1739962643613!2d-122.41990648468174!3d37.779280979757095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085816715cb3c29%3A0x4b6e3e3a0aa8bb3c!2sAnimal%20Shelter!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
 
-						<!-- Get involved dropdown starts here -->
+    <h2>Opening Hours</h2>
+    <div class="hours">
+      <span><strong>Mon – Fri:</strong> 10:00 AM – 6:00 PM</span>
+      <span><strong>Saturday:</strong> 10:00 AM – 4:00 PM</span>
+      <span><strong>Sunday:</strong> Closed</span>
+    </div>
 
-						<li class="navbar__menu-link">
-							<a href="../get-involved/">
-								Get involved
-							</a>
-							<ul class="navbar__submenu">
-								<li class="navbar__submenu-link">
-									<a href="/membership/">
-										Membership
-									</a>
-								</li>
-								<li class="navbar__submenu-link">
-									<a href="/visit/">
-										Visit
-									</a>
-								</li>
-								<li class="navbar__submenu-link">
-									<a href="/volunteer/">
-										Volunteer
-									</a>
-								</li>
-								<li class="navbar__submenu-link">
-									<a href="/foster/">
-										Foster
-									</a>
-								</li>
-							</ul>
-						</li>
+    <h2>What to Expect</h2>
+    <p>
+      - Friendly staff and volunteers to guide your visit<br />
+      - Clean, spacious areas to meet animals comfortably<br />
+      - Informational tours and walk-throughs of our rescue journey<br />
+      - Dedicated adoption consultation zones<br />
+      - Merch corner with PawSome souvenirs!
+    </p>
 
-						<li class="navbar__menu-link">
-							<a href="/shop/">
-								Shop
-							</a>
-						</li>
-
-						<!-- Fun dropdown starts here -->
-
-						<li class="navbar__menu-link">
-							<a href="../fun/">
-								Fun
-							</a>
-							<ul class="navbar__submenu">
-								<li class="navbar__submenu-link">
-									<a href="/pet-age-converter/">
-										Pet age converter
-									</a>
-								</li>
-								<li class="navbar__submenu-link">
-									<a href="/memory-game/">
-										Memory game
-									</a>
-								</li>
-							</ul>
-						</li>
-						
-						<li class="navbar__menu-link">
-							<a href="/contact/">
-								Contact
-							</a>
-						</li>
-					</ul>
-				</section>
-
-				<a 
-					class="navbar__menu-donate"
-					href="/donate/">
-					Donate
-				</a>
-
-				<button 
-					class="navbar__mobile-menu-icon"
-					aria-label="menu">
-					<div class="navbar__mobile-menu-icon-top"></div>
-					<div class="navbar__mobile-menu-icon-middle"></div>
-					<div class="navbar__mobile-menu-icon-bottom"></div>
-				</button>
-			</nav>
-		</header>
-
-		<main>
-			<h1 class="visit__title">Visit us</h1>
-			<div class="visit__container">
-				<p class="visit__container-paragraph">
-					If you'd like to see our animals in person, you're always welcome to 
-					come visit our animal shelter in our opening hours, as seen below.
-				</p>
-				<h2 class="visit__container-h2">Opening hours:</h2>
-				<div class="visit__container-opening-hours">
-					<strong>monday:</strong> 09.00 - 16.00 <br>
-					<strong>tuesday:</strong> 09.00 - 16.00 <br>
-					<strong>wednesday:</strong> 09.00 - 16.00 <br>
-					<strong>thursday:</strong> 09.00 - 16.00 <br>
-					<strong>friday:</strong> 10.00 - 15.00 <br>
-					<strong>saturday:</strong> <em>closed</em> <br>
-					<strong>sunday:</strong> <em>closed</em> 
-				</div>
-				<img 
-					class="visit__container-image"
-					src="/_app/assets/images/josh-hild-6kVGxIHriTA-unsplash.jpg" 
-					alt="Photo of a big house in a green forest">	
-			</div>
-
-		</main>
-		
-		<footer class="footer">
-			<section class="footer__items">
-				<div class="footer__items-logo">
-					<a href="../index.html">PawSome</a>
-				</div>
-					<ul class="footer__items-links">
-						<li class="footer__items-link">
-							<a href="../contact/">
-								<img 
-									src="../_app/assets/icons/icons8-mail-50.png" 
-									alt="Contact">
-							</a>
-						</li>
-						<li class="footer__items-link">
-							<a 
-								target="_blank"
-								href="www.facebook.com">
-								<img 
-									src="../_app/assets/icons/icons8-facebook-50.png" 
-									alt="Facebook">
-							</a>
-						</li>
-						<li class="footer__items-link">
-							<a 
-								target="_blank"
-								href="www.instagram.com">
-								<img 
-									src="../_app/assets/icons/icons8-instagram-50.png" 
-									alt="Instagram">
-							</a>
-						</li>
-						<li class="footer__items-link">
-							<a href="www.twitter.com">
-								<img 
-									src="../_app/assets/icons/icons8-twitter-50.png" 
-									alt="Twitter">
-							</a>
-						</li>
-					</ul>
-				</section>
-
-				<div class="footer__copyright">
-					Copyright © 2024 Madelen Foss
-				</div>				
-
-		</footer>
-	</body>
+    <div class="contact">
+      <h2>Need Assistance?</h2>
+      <p>Email us at: <a href="mailto:visit@pawsome.org">visit@pawsome.org</a><br />
+         Call us: +1 (123) 456-7890</p>
+    </div>
+  </main>
+</body>
 </html>

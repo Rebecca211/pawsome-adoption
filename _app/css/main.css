@@ -1,23 +1,165 @@
-@import './reset.css';
-@import './fonts.css';
-@import './base.css';
-@import './variables.css';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-@import './modules/header.css';
-@import './modules/footer.css';
-@import './modules/slideshow.css';
-@import './modules/pets.css';
-@import './modules/pet-info.css';
-@import './modules/pet-age-converter.css';
-@import './modules/fun.css';
-@import './modules/adopt.css';
-@import './modules/get-involved.css';
-@import './modules/contact.css';
-@import './modules/membership.css';
-@import './modules/about.css';
-@import './modules/visit.css';
-@import './modules/payment-options.css';
-@import './modules/volunteer.css';
-@import './modules/foster.css';
-@import './modules/shop.css';
-@import './modules/donate.css';
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf4;
+  color: #333;
+}
+
+/* ---------- NAVBAR BASE ---------- */
+/* ---------- NAVBAR BASE ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar__logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #38a169;
+}
+
+.navbar__items {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.navbar__menu li {
+  position: relative;
+}
+
+.navbar__menu > li > a {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem;
+  color: #333;
+  font-size: 1rem;
+}
+
+.navbar__menu > li > a:hover {
+  color: #38a169;
+}
+
+/* ---------- DROPDOWN MENU ---------- */
+.navbar__submenu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0;
+  z-index: 1001;
+}
+
+.navbar__submenu li {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar__submenu a {
+  display: block;
+  list-style: none;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navbar__submenu a:hover {
+  background-color: #f0f0f0;
+  color: #38a169;
+}
+
+/* Show submenu on hover */
+.navbar__menu > li:hover > .navbar__submenu {
+  display: block;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(to right, #fff9ec, #e8ffe6);
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero__cta {
+  padding: 0.75rem 1.5rem;
+  background: #38a169;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.slideshow__container {
+  max-width: 100%;
+  overflow: hidden;
+  height: 300px;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slideshow__dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.dot.active {
+  background-color: #38a169;
+}
+
+.footer {
+  background: #f1f5f9;
+  text-align: center;
+  padding: 2rem;
+}

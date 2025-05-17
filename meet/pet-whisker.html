@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meet Luna - PawSome</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fffaf4;
+      margin: 0;
+      color: #2d3748;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      background: linear-gradient(to right, #e8ffe6, #fff9ec);
+      padding: 2rem;
+      align-items: center;
+      gap: 2rem;
+    }
+    .hero img {
+      width: 400px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .hero-details {
+      flex: 1;
+    }
+    .hero-details h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #2f855a;
+    }
+    .hero-details p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 1rem;
+    }
+    .info-grid div {
+      margin: 0.25rem 0;
+    }
+    .story {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .story h2 {
+      margin-bottom: 1rem;
+    }
+    .story p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #4a5568;
+    }
+    .adopt-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: #38a169;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .adopt-btn:hover {
+      background: #2f855a;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <img src="../_app/assets/images/cat" alt="Whisker the cat">
+  <div class="hero-details">
+    <h1>Meet Whisker 🐱</h1>
+    <p><strong>Breed:</strong> Domestic Shorthair</p>
+    <p><strong>Age:</strong> 3 years</p>
+    <p><strong>Gender:</strong> Male</p>
+    <p><strong>Good with:</strong> Quiet homes, adults, other calm pets</p>
+    <p><strong>Vaccinated:</strong> Yes</p>
+    <p><strong>Neutered:</strong> Yes</p>
+    <a href="../adopt.html?pet=Whisker" class="adopt-btn">Apply to Adopt Whisker</a>
+  </div>
+</section>
+
+<section class="story">
+  <h2>Whisker’s Story</h2>
+  <p>
+    Whisker was found curled up in a cardboard box near a bakery — cold, cautious, but curious. He was malnourished but calm, and his soft eyes spoke volumes about the life he had quietly endured on the streets.
+  </p>
+  <p>
+    Since arriving at our shelter, Whisker has transformed into a calm, affectionate cat who enjoys sunny windowsills and gentle head scratches. He is independent but forms deep bonds with those he trusts.
+  </p>
+  <p>
+    Whisker is looking for a quiet home where he can live out his years with dignity, warmth, and the occasional string toy. He’s not demanding — just grateful for safety, care, and someone who’ll let him be himself.
+  </p>
+</section>
+
+</body>
+</html>

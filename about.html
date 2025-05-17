@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - PawSome</title>
+  <link rel="stylesheet" href="/_app/css/main.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fffaf4;
+      color: #2d3748;
+    }
+
+    .about-hero {
+      background: linear-gradient(to right, #e8ffe6, #fff9ec);
+      padding: 4rem 1rem 2rem;
+      text-align: center;
+    }
+
+    .about-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #4a5568;
+    }
+
+    .about-content {
+      max-width: 1000px;
+      margin: 2rem auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 1rem;
+      align-items: center;
+    }
+
+    .about-text {
+      flex: 1 1 500px;
+    }
+
+    .about-text h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #2f855a;
+    }
+
+    .about-text p {
+      line-height: 1.6;
+      font-size: 1.05rem;
+      color: #555;
+    }
+
+    .about-image {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch("./nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <section class="about-hero">
+    <h1>Who We Are</h1>
+    <p>PawSome is a heartfelt initiative started by animal lovers who believe every pet deserves a forever home. We rescue, rehabilitate, and rehome pets across all species — from dogs and cats to birds, bunnies, and beyond.</p>
+  </section>
+
+  <section class="about-content">
+    <div class="about-text">
+      <h2>Our Story</h2>
+      <p>Founded in 2024, PawSome began as a university project with one mission: to reduce the number of homeless pets. Over time, it evolved into a full-fledged online platform where users can browse, connect, and adopt adorable companions. We've connected 150+ pets with loving families so far — and we're just getting started.</p>
+      
+      <h2>Our Mission</h2>
+      <p>We want to make adoption simple, joyful, and accessible. By blending technology with compassion, we’re here to help people fall in love with their next best friend.</p>
+    </div>
+    <div class="about-image">
+      <img src="/_app/assets/images/happy-adopted-pets.jpg" alt="Happy adopted pets">
+    </div>
+  </section>
+
+ <div id="footer-placeholder"></div>
+<script>
+  fetch("./footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>

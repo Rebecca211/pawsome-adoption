@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Involved - PawSome</title>
+  <link rel="stylesheet" href="./_app/css/main.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fefefe;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2d3748;
+    }
+    .involve-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .involve-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .involve-card h2 {
+      margin-bottom: 1rem;
+      color: #38a169;
+    }
+    .involve-card p {
+      font-size: 1rem;
+      color: #4a5568;
+    }
+    .involve-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #2b6cb0;
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+    .involve-card a:hover {
+      background: #234e83;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+<script>
+  fetch("/nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
+  <main>
+    <h1>Get Involved with PawSome</h1>
+    <section class="involve-grid">
+      <div class="involve-card">
+        <h2>Volunteer</h2>
+        <p>Help us care for the animals, assist with events, or support our outreach team. Your time changes lives.</p>
+        <a href="volunteer/index.html">Learn More</a>
+      </div>
+      <div class="involve-card">
+        <h2>Foster</h2>
+        <p>Provide temporary homes for pets in need. Fostering opens space in our shelter and prepares animals for adoption.</p>
+        <a href="foster/index.html">Start Fostering</a>
+      </div>
+      <div class="involve-card">
+        <h2>Membership</h2>
+        <p>Become a PawSome Member to support us year-round and get exclusive updates, perks, and invites.</p>
+        <a href="membership/membership-payment-combined.html">Join Now</a>
+      </div>
+      <div class="involve-card">
+        <h2>Visit Us</h2>
+        <p>Stop by our shelter to meet the animals, tour the facility, or drop off donations. We’d love to see you!</p>
+        <a href="visit/index.html">Plan Your Visit</a>
+      </div>
+    </section>
+  </main>
+   <div id="footer-placeholder"></div>
+<script>
+  fetch("./footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+</body>
+
+</html>

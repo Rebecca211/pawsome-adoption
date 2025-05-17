@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meet Luna - PawSome</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fffaf4;
+      margin: 0;
+      color: #2d3748;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      background: linear-gradient(to right, #e8ffe6, #fff9ec);
+      padding: 2rem;
+      align-items: center;
+      gap: 2rem;
+    }
+    .hero img {
+      width: 400px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .hero-details {
+      flex: 1;
+    }
+    .hero-details h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #2f855a;
+    }
+    .hero-details p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 1rem;
+    }
+    .info-grid div {
+      margin: 0.25rem 0;
+    }
+    .story {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .story h2 {
+      margin-bottom: 1rem;
+    }
+    .story p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #4a5568;
+    }
+    .adopt-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: #38a169;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .adopt-btn:hover {
+      background: #2f855a;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <img src="../_app/assets/images/terry.jpeg" alt="Luna the dog">
+  <div class="hero-details">
+    <h1>Meet Terry 🐶</h1>
+    <p><strong>Breed:</strong> Terrier</p>
+    <p><strong>Age:</strong> 1 years</p>
+    <p><strong>Gender:</strong> Female</p>
+    <p><strong>Good with:</strong> Kids, other pets</p>
+    <p><strong>Vaccinated:</strong> Yes</p>
+    <p><strong>Spayed/Neutered:</strong> Yes</p>
+    <a href="../adopt.html?pet=Terry" class="adopt-btn">Apply to Adopt Terry</a>
+  </div>
+</section>
+
+<section class="story">
+  <h2>Terry Journey</h2>
+  <p>
+Terry wasn’t always the cheerful ball of fur he is today. He was found curled beneath an old park bench, trembling, his big brown eyes watching the world with quiet hope. No one knew how long he had been alone — just that he never barked, never begged. He simply waited.
+  </p>
+  <p>
+When volunteers first approached him, he wagged his tail so gently it looked like a whisper in the wind. That was Terry: soft, patient, and endlessly forgiving.
+  </p>
+  <p>
+In the shelter, he blossomed. He’d tilt his head when you spoke, as if he truly understood. He loved belly rubs, morning stretches in the sun, and licking peanut butter from a spoon. And oh — the zoomies! For a little guy with short legs, Terry could fly.
+  </p>
+  <p>But what truly makes Terry special isn’t just his cuteness (which is off the charts). It’s the way he makes you feel like you’re the only human in the world. He leans into you during storms. He sits beside you when you’re sad. And when you come home — whether it’s been ten minutes or ten hours — he celebrates like you’re his whole universe.
+Terry is ready now. Ready for a family who sees him not as a rescue, but as the rescuer of their hearts.
+
+</p>
+</section>
+   <div id="footer-placeholder"></div>
+<script>
+  fetch("../footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+</body>
+</html>

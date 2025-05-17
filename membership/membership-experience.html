@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join PawSome - Membership</title>
+  <link rel="stylesheet" href="./_app/css/main.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fdfaf5;
+      color: #333;
+    }
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    }
+    h1 {
+      text-align: center;
+      color: #2d3748;
+      margin-bottom: 0.5rem;
+    }
+    p.subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #4a5568;
+      margin-bottom: 2rem;
+    }
+    .highlight {
+      background: #f0fff4;
+      border-left: 4px solid #38a169;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      color: #2f855a;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    label {
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+    input[type="text"],
+    input[type="email"] {
+      padding: 0.6rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+    fieldset {
+      border: none;
+      padding: 0;
+    }
+    .donation-section {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .donation-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+      justify-content: center;
+    }
+    .donation-option {
+      background: #edf2f7;
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      width: 120px;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .donation-option:hover {
+      background: #e2e8f0;
+    }
+    .donation-option input {
+      display: none;
+    }
+    .donation-option span {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #2d3748;
+    }
+    .donation-option small {
+      display: block;
+      font-size: 0.8rem;
+      color: #718096;
+    }
+    .donation-option[data-tooltip]:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: -2.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #2d3748;
+      color: #fff;
+      padding: 0.4rem 0.6rem;
+      border-radius: 5px;
+      font-size: 0.75rem;
+      white-space: nowrap;
+      z-index: 10;
+    }
+    .or-divider {
+      text-align: center;
+      font-weight: bold;
+      margin: 1.5rem 0 0.5rem;
+      color: #718096;
+    }
+    input[type="submit"] {
+      padding: 0.75rem;
+      font-size: 1rem;
+      background-color: #38a169;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+    input[type="submit"]:hover {
+      background-color: #2f855a;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Become a PawSome Member</h1>
+    <p class="subtitle">
+      Join our family of animal lovers and make a real difference — one paw at a time.
+    </p>
+
+    <div class="highlight">
+      🐾 As a member, you’re not just donating — you’re joining a journey.  
+      Get updates, exclusive invites, and virtual hugs from pets you’ve helped!
+    </div>
+
+    <form action="/payment-options/index.html" method="get">
+      <div>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Your full name" required />
+      </div>
+      <div>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+      </div>
+
+      <fieldset class="donation-section">
+        <legend><strong>Choose your giving path</strong></legend>
+        <div class="donation-group">
+          <label class="donation-option" data-tooltip="Feed one rescued pet monthly">
+            <input type="radio" name="donation" value="monthly-10" required />
+            <span>$10</span><small>Monthly</small>
+          </label>
+          <label class="donation-option" data-tooltip="Covers one vaccination">
+            <input type="radio" name="donation" value="monthly-25" />
+            <span>$25</span><small>Monthly</small>
+          </label>
+          <label class="donation-option" data-tooltip="Supports one full animal's care">
+            <input type="radio" name="donation" value="monthly-50" />
+            <span>$50</span><small>Monthly</small>
+          </label>
+        </div>
+
+        <div class="or-divider">OR</div>
+
+        <div class="donation-group">
+          <label class="donation-option" data-tooltip="Toys, treats & training">
+            <input type="radio" name="donation" value="yearly-100" />
+            <span>$100</span><small>Yearly</small>
+          </label>
+          <label class="donation-option" data-tooltip="Shelter essentials & upgrades">
+            <input type="radio" name="donation" value="yearly-200" />
+            <span>$200</span><small>Yearly</small>
+          </label>
+          <label class="donation-option" data-tooltip="Rescue more animals in need">
+            <input type="radio" name="donation" value="yearly-500" />
+            <span>$500</span><small>Yearly</small>
+          </label>
+        </div>
+      </fieldset>
+
+      <input type="submit" value="Continue and Join the PawSome Family" />
+    </form>
+  </main>
+</body>
+</html>

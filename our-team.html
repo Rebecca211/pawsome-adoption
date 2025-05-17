@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Team - PawSome</title>
+  <link rel="stylesheet" href="../_app/css/main.css" />
+  <style>
+    .pet-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.pet-card {
+  width: 260px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pet-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.pet-card h3 {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 1.1rem;
+  color: #2d3748;
+}
+
+.pet-card p {
+  font-size: 0.95rem;
+  color: #4a5568;
+  margin: 0 0 0.75rem;
+}
+
+.pet-card__btn {
+  margin: 0.25rem 0.5rem 0.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background: #38a169;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+    h1 {
+      text-align: center;
+      margin: 2rem 0 1rem;
+      color: #2d3748;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+<script>
+  fetch("/nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fffaf4;
+      color: #333;
+    }
+    header {
+      background-color: #38a169;
+      padding: 2rem;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+.team-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+    .team-card {
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      overflow: hidden;
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+.team-card:hover {
+  transform: scale(1.2);
+}
+ .team-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  background-color: #f9f9f9; /* optional: adds a clean background */
+  padding: 4px;
+}
+    .team-card h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.2rem;
+      text-align: center;
+      color: #2d3748;
+    }
+    .team-card p {
+      font-size: 0.95rem;
+      color: #4a5568;
+      padding: 0 1rem 1.2rem;
+    }
+    @media screen and (max-width: 1024px) {
+  .team-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .team-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+<script>
+  fetch("/nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
+  <header>
+    <h1>Meet Our PawSome Team</h1>
+    <p>Behind every wagging tail is someone who made it happen 🐾</p>
+  </header>
+
+  <section class="team-container">
+    <div class="team-card">
+      <img src="./_app/assets/images/anish.jpg" alt="Anish">
+      <h3>Anish</h3>
+    <ul>
+        <li>Tech Coordinator</li>
+        <li>Talented Photographer</li>
+        <li>Reliable and precise execution</li>
+      </ul>    </div>
+    <div class="team-card">
+      <img src="./_app/assets/images/rebecca.jpg" alt="Rebecca">
+      <h3>Rebecca</h3>
+ <ul>
+        <li>Creative Director</li>
+        <li>Passionate about storytelling</li>
+        <li>Brings warmth to our UI/UX</li>
+      </ul>    </div>
+    <div class="team-card">
+      <img src="./_app/assets/images/roshna.jpg" alt="Roshna">
+      <h3>Roshna</h3>
+     <ul>
+        <li>Community Manager</li>
+        <li>Brilliant communicator</li>
+        <li>Always making people smile</li>
+      </ul>    </div>
+    <div class="team-card">
+      <img src="./_app/assets/images/sandeep.jpg" alt="Sandeep">
+      <h3>Sandeep</h3>
+     <ul>
+        <li>Ops & Logistics Lead</li>
+        <li>Keeps things running smoothly</li>
+        <li>Loves helping furry friends</li>
+      </ul>    </div>
+  </section>
+</body>
+</html>

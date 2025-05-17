@@ -1,29 +1,14 @@
-/* :root {
-	--primary: #ffffff;
-	--secondary: #ebcb4c;
-	--tertiary: #2a4c11;
-	--quaternary: #FF6B00;
-	--quinary: #f1f171;
-	--senary: rgb(248, 238, 238);
-	--septenary: #ff9900;
-
-	--logo-font: 'Roboto', sans-serif;
-	--font-h1:'Roboto', sans-serif; 
-	--font-h3:'Roboto', sans-serif;
-	--donate-font: 'Lilita One', sans-serif;
-} */
-
 :root {
-	--primary: #ecd9d936;         /* Clean white background */
-	--secondary: #fffcf8;       /* Light peach for sections */
-	--tertiary: #8f702e;        /* Calming green for trust and care */
-	--quaternary: #38a317;      /* Coral for call-to-action */
-	--quinary: #FFF8DC;         /* Soft cream background for contrast */
-	--senary: #F5F5F5;          /* Subtle gray for cards and borders */
-	--septenary: #FFB74D;       /* Warm orange for buttons and icons */
-
-	--logo-font: 'Poppins', sans-serif;
-	--font-h1: 'Poppins', sans-serif;
-	--font-h3: 'Poppins', sans-serif;
-	--donate-font: 'Baloo 2', cursive;
+	--primary: #fffdfa;         /* Soft off-white for background */
+	--secondary: hwb(53 11% 0%);       /* Light yellow for highlights */
+	--tertiary: #1c1c1c;        /* Near black for text */
+	--quaternary: #14c431;      /* Bright yellow for buttons/icons */
+	--quinary: #fff2cc;         /* Pale yellow for section backgrounds */
+	--senary: #fef6e4;          /* Very soft cream for contrast sections */
+	--septenary: #ff9800;       /* Warm orange for CTA highlights */
+	
+	--logo-font: 'Baloo 2', cursive;         /* Friendly and round */
+	--font-h1: 'Fredoka', sans-serif;        /* Bold and playful */
+	--font-h3: 'Fredoka', sans-serif;
+	--donate-font: 'Baloo 2', cursive;       /* Matching the logo's energy */
 }

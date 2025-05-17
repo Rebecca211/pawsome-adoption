@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Become a Hero - PawSome Membership</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdfaf5;
+      margin: 0;
+      color: #333;
+    }
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+    h1 {
+      text-align: center;
+      color: #2d3748;
+    }
+    p.centered {
+      text-align: center;
+      color: #4a5568;
+      max-width: 700px;
+      margin: 1rem auto;
+    }
+    .step {
+      margin: 2rem 0;
+    }
+    .donation-options, .payment-methods, .payment-form, .confirmation {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    .options {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .option {
+      background: #edf2f7;
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      width: 130px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+    .option:hover {
+      background: #e2e8f0;
+    }
+    .option.selected {
+      border: 2px solid #38a169;
+      background: #f0fff4;
+      transform: scale(1.05);
+    }
+    .option span {
+      display: block;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+    .payment-icons img {
+      width: 60px;
+      cursor: pointer;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+    .payment-icons img:hover, .payment-icons img.selected {
+      filter: none;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, select {
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    button {
+      padding: 0.7rem 2rem;
+      background: #38a169;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    .confirmation img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    .centered {
+      text-align: center;
+    }
+    .loop-title {
+      font-size: 2rem;
+      color: #38a169;
+      animation: bounceLoop 2.5s ease-in-out infinite;
+    }
+    .confirmation {
+      animation: fadeIn 1s ease-in;
+    }
+ @keyframes bounceLoop {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes fadePulse {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; transform: scale(1.02); }
+    
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>💖 Become a PawSome Hero Today</h1>
+    <p class="centered">
+      Your choice today feeds hungry bellies, warms lonely hearts, and turns abandoned lives into happy tails.
+      Join a family that saves lives — one paw at a time.
+    </p>
+
+    <div class="step donation-options active">
+      <h2 class="centered">Select a Donation</h2>
+      <div class="options" id="donationOptions">
+        <div class="option" data-value="$10" data-tier="monthly-10">$10<span>Monthly</span></div>
+        <div class="option" data-value="$25" data-tier="monthly-25">$25<span>Monthly</span></div>
+        <div class="option" data-value="$100" data-tier="yearly-100">$100<span>Yearly</span></div>
+      </div>
+    </div>
+
+    <div class="step payment-methods">
+      <h2 class="centered">Choose a Payment Method</h2>
+      <div class="options payment-icons" id="paymentOptions">
+        <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" data-method="visa" />
+        <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard" data-method="mastercard" />
+        <img src="https://img.icons8.com/color/48/000000/paypal.png" alt="PayPal" data-method="paypal" />
+      </div>
+    </div>
+
+    <div class="step payment-form">
+      <h2 class="centered">Enter Your Details</h2>
+      <form id="payForm">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="text" placeholder="Card Number or PayPal Email" required />
+        <button type="submit">Confirm Payment</button>
+      </form>
+    </div>
+
+    <div class="step confirmation centered">
+    <h2 class="loop-title">🎉 Thank You for Saving a Life!</h2>
+      <p>Your generosity has given a pet a second chance at happiness. You're amazing!</p>
+      <img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074_1280.jpg" alt="Happy Pet">
+    </div>
+  </main>
+
+  <script>
+    const donationOptions = document.querySelectorAll('.donation-options .option');
+    const paymentStep = document.querySelector('.payment-methods');
+    const paymentIcons = document.querySelectorAll('.payment-icons img');
+    const paymentForm = document.querySelector('.payment-form');
+    const confirmView = document.querySelector('.confirmation');
+
+    donationOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        donationOptions.forEach(o => o.classList.remove('selected'));
+        option.classList.add('selected');
+        paymentStep.classList.add('active');
+      });
+    });
+
+    paymentIcons.forEach(icon => {
+      icon.addEventListener('click', () => {
+        paymentIcons.forEach(i => i.classList.remove('selected'));
+        icon.classList.add('selected');
+        paymentForm.classList.add('active');
+      });
+    });
+
+    document.getElementById('payForm').addEventListener('submit', e => {
+      e.preventDefault();
+      paymentForm.classList.remove('active');
+      confirmView.classList.add('active');
+    });
+  </script>
+</body>
+</html>

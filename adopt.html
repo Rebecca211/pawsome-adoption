@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adopt a Pet - PawSome</title>
+  <link rel="stylesheet" href="../_app/css/main.css">
+  <style>
+    .adopt-page {
+      max-width: 600px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+    .adopt-page h1 {
+      margin-bottom: 1rem;
+      color: #2d3748;
+    }
+    .adopt-page form label {
+      display: block;
+      margin-top: 1rem;
+    }
+    .adopt-page input,
+    .adopt-page textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .adopt-page button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 2rem;
+      background: #38a169;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+  <body>
+  <div id="navbar-placeholder"></div>
+<script>
+  fetch("/nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
+  <main class="adopt-page">
+    <h1 id="pet-name">Adopt a Pet</h1>
+    <form id="adoptionForm">
+  <label for="fullName">Your Full Name</label>
+  <input type="text" id="fullName" name="fullName" required>
+
+  <label for="email">Your Email</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="address">Home Address</label>
+  <textarea id="address" name="address" rows="3" required></textarea>
+
+  <label for="why">Why do you want to adopt this pet?</label>
+  <textarea id="why" name="why" rows="4" required></textarea>
+
+  <button type="submit">Submit Adoption Request</button>
+</form>
+
+<div id="thankYouMessage" style="display:none; text-align:center; margin-top:2rem;">
+  <h2 style="color:#38a169;">🎉 Thank You!</h2>
+  <p>Your application has been received. We’ll contact you soon.</p>
+  <p style="font-size:2rem;">🐾❤️🐶😺</p>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const petName = params.get("pet");
+  if (petName) {
+    document.getElementById("pet-name").textContent = "Adopt " + petName;
+  }
+
+  document.getElementById("adoptionForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Smooth transition
+    this.style.opacity = "0";
+    setTimeout(() => {
+      this.style.display = "none";
+      const thankYou = document.getElementById("thankYouMessage");
+      thankYou.style.display = "block";
+      thankYou.style.opacity = "0";
+      thankYou.animate([{opacity: 0}, {opacity: 1}], {
+        duration: 1000,
+        fill: "forwards"
+      });
+    }, 400);
+  });
+</script>
+
+</body>
+</html>

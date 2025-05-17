@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meet Our Pets - PawSome</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fffaf4;
+      margin: 0;
+      color: #2d3748;
+    }
+
+    header {
+      background: linear-gradient(to right, #e8ffe6, #fff9ec);
+      padding: 3rem 1rem 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.15rem;
+      color: #4a5568;
+    }
+
+    .pet-stories {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .story-card {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .story-card.show {
+      animation: slideUp 0.6s forwards;
+    }
+
+    .story-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+    }
+
+    .story-card img {
+      width: 280px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .story-content {
+      padding: 1.5rem;
+      flex: 1;
+    }
+
+    .story-content h2 {
+      margin: 0 0 0.5rem;
+      color: #2f855a;
+      font-size: 1.6rem;
+    }
+
+    .story-content p {
+      margin-bottom: 1.2rem;
+      line-height: 1.6;
+      font-size: 1.05rem;
+      color: #4a4a4a;
+    }
+
+    .story-content a {
+      display: inline-block;
+      color: white;
+      background: #38a169;
+      padding: 0.55rem 1.3rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .story-content a:hover {
+      background: #2f855a;
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Meet Our Pets</h1>
+  <p>Get to know their stories, personalities, and their journey so far 🐾</p>
+</header>
+
+<section class="pet-stories">
+  <div class="story-card">
+    <img src="../_app/assets/images/German-Shepherd-1.jpg" alt="Luna the dog">
+    <div class="story-content">
+      <h2>Luna</h2>
+      <p>Luna was rescued from a stormy night, found cold and scared. Now, she's warm, safe, and incredibly affectionate. She's great with kids and loves belly rubs.</p>
+      <a href="pet-luna.html">Meet Luna →</a>
+     <a href="/adopt.html?pet=Luna" class="pet-card__btn">Apply to Apopt →</a>
+
+    </div>
+  </div>
+
+  <div class="story-card">
+    <img src="../_app/assets/images/scottish-straight-cat-white-background-looking-up-top-view-copy-space-banner_76158-766.jpg" alt="Whisker the cat">
+    <div class="story-content">
+      <h2>Whisker</h2>
+      <p>Whisker is a soft fur who loves meowing to the morning sunshine. Found alone in a park, he's now full of life and waiting for his forever home.</p>
+           <a href="pet-whisker.html">Meet Whisker →</a>
+      <a href="/adopt.html?pet=whisker" class="pet-card__btn">Apply to Apopt →</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Animate cards as they appear
+  window.addEventListener("load", () => {
+    document.querySelectorAll(".story-card").forEach((card, i) => {
+      setTimeout(() => {
+        card.classList.add("show");
+      }, 200 * i);
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,207 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop - PawSome</title>
+  <link rel="stylesheet" href="../_app/css/main.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fffaf4;
+      color: #2d3748;
+    }
 
-		<title>PawSome - Pet Adoption</title>
+    .shop-header {
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+      background: linear-gradient(to right, #fff9ec, #e8ffe6);
+    }
 
-		<meta name="description" content="Website for PawSome - pet adoption - all pets">
+    .shop-header h1 {
+      font-size: 2.5rem;
+    }
 
-		<link rel="stylesheet" href="../_app/css/main.css">
-		<script type="module" src="../_app/js/main.js"></script>
-	</head>
-	
-	<body>
-		<header>
-			<nav 
-				id="top" 
-				class="navbar"> <!-- to top button id -->
-				<div 
-					class="navbar__logo"
-					title="PawSome - pet adoption">
-					<a href="/index.html">PawSome</a>
-				</div>
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-				<section class="navbar__items">
-					<ul class="navbar__menu">
-						<li class="navbar__menu-link">
-							<a href="/about/">
-								About
-							</a>
-						</li>
+    .product-card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s;
+    }
 
-						<!-- Adopt dropdown starts here -->
+    .product-card:hover {
+      transform: scale(1.05);
+    }
 
-						<li class="navbar__menu-link">
-							<a href="../adopt/">
-								Adopt
-							</a>
-							<ul class="navbar__submenu">
-								<li class="navbar__submenu-link">
-									<a href="/dogs/">
-										Dogs
-									</a>
-								</li>
-								<li class="navbar__submenu-link">
-									<a href="/cats/">
-										Cats
-									</a>
-								</li>
-								<li class="navbar__submenu-link">
-									<a href="/birds/">
-										Birds
-									</a>
-								</li>
-								<li class="navbar__submenu-link">
-									<a href="/bunnies/">
-										Bunnies
-									</a>
-								</li>
-								<li class="navbar__submenu-link">
-									<a href="/other/">
-										Other
-									</a>
-								</li>
-							</ul>
-						</li>
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
 
-						<!-- Get involved dropdown starts here -->
+    .product-card h3 {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
 
-						<li class="navbar__menu-link">
-							<a href="../get-involved/">
-								Get involved
-							</a>
-							<ul class="navbar__submenu">
-								<li class="navbar__submenu-link">
-									<a href="/membership/">
-										Membership
-									</a>
-								</li>
-								<li class="navbar__submenu-link">
-									<a href="/visit/">
-										Visit
-									</a>
-								</li>
-								<li class="navbar__submenu-link">
-									<a href="/volunteer/">
-										Volunteer
-									</a>
-								</li>
-								<li class="navbar__submenu-link">
-									<a href="/foster/">
-										Foster
-									</a>
-								</li>
-							</ul>
-						</li>
+    .product-card p {
+      color: #4a5568;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
 
-						<li class="navbar__menu-link">
-							<a href="/shop/">
-								Shop
-							</a>
-						</li>
+    .product-card button {
+      padding: 0.5rem 1.2rem;
+      background: #38a169;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 20px;
+      cursor: pointer;
+    }
 
-						<!-- Fun dropdown starts here -->
+    .product-card button:hover {
+      background: #2f855a;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch("../nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      });
+  </script>
 
-						<li class="navbar__menu-link">
-							<a href="../fun/">
-								Fun
-							</a>
-							<ul class="navbar__submenu">
-								<li class="navbar__submenu-link">
-									<a href="/pet-age-converter/">
-										Pet age converter
-									</a>
-								</li>
-								<li class="navbar__submenu-link">
-									<a href="/memory-game/">
-										Memory game
-									</a>
-								</li>
-							</ul>
-						</li>
-						
-						<li class="navbar__menu-link">
-							<a href="/contact/">
-								Contact
-							</a>
-						</li>
-					</ul>
-				</section>
+  <section class="shop-header">
+    <h1>Shop for Your New Fur Friend 🛍️</h1>
+    <p>Everything you need to spoil your adopted buddy!</p>
+  </section>
 
-				<a 
-					class="navbar__menu-donate"
-					href="/donate/">
-					Donate
-				</a>
-
-				<button 
-					class="navbar__mobile-menu-icon"
-					aria-label="menu">
-					<div class="navbar__mobile-menu-icon-top"></div>
-					<div class="navbar__mobile-menu-icon-middle"></div>
-					<div class="navbar__mobile-menu-icon-bottom"></div>
-				</button>
-			</nav>
-		</header>
-
-		<main>
-			<h1 class="shop__title">Shop</h1>
-			<div class="shop__announcement">
-				<h2 class="shop__announcement-title">COMING SOON!</h2>
-				<img 
-					class="shop__announcement-image"
-					src="/_app/assets/images/shop-prints-coming-soon.png" 
-					alt="Illustration of a dog with a speak bubble containing a red heart">
-			</div>
-		</main>
-		
-		<footer class="footer">
-			<section class="footer__items">
-				<div class="footer__items-logo">
-					<a href="../index.html">PawSome</a>
-				</div>
-					<ul class="footer__items-links">
-						<li class="footer__items-link">
-							<a href="../contact/">
-								<img 
-									src="../_app/assets/icons/icons8-mail-50.png" 
-									alt="Contact">
-							</a>
-						</li>
-						<li class="footer__items-link">
-							<a 
-								target="_blank"
-								href="www.facebook.com">
-								<img 
-									src="../_app/assets/icons/icons8-facebook-50.png" 
-									alt="Facebook">
-							</a>
-						</li>
-						<li class="footer__items-link">
-							<a 
-								target="_blank"
-								href="www.instagram.com">
-								<img 
-									src="../_app/assets/icons/icons8-instagram-50.png" 
-									alt="Instagram">
-							</a>
-						</li>
-						<li class="footer__items-link">
-							<a href="www.twitter.com">
-								<img 
-									src="../_app/assets/icons/icons8-twitter-50.png" 
-									alt="Twitter">
-							</a>
-						</li>
-					</ul>
-				</section>
-
-				<div class="footer__copyright">
-					Copyright © 2024 Madelen Foss
-				</div>				
-
-		</footer>
-	</body>
+  <section class="shop-grid">
+    <div class="product-card">
+      <img src="../_app/assets/images/chewtoy.jpg" alt="Chew Toy">
+      <h3>Chew Toy</h3>
+      <p>Durable and fun! Perfect for dogs of all sizes.</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="../_app/assets/images/bowl.jpg" alt="Pet Bowl">
+      <h3>Pet Bowl</h3>
+      <p>Stainless steel bowl — hygienic and easy to clean.</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="../_app/assets/images/leash.jpeg" alt="Leash">
+      <h3>Leash</h3>
+      <p>Comfortable grip, great for walks and adventures.</p>
+      <button>Add to Cart</button>
+    </div>
+  </section>
+     <div id="footer-placeholder"></div>
+<script>
+  fetch("../footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+</body>
 </html>

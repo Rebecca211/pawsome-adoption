@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meet Luna - PawSome</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fffaf4;
+      margin: 0;
+      color: #2d3748;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      background: linear-gradient(to right, #e8ffe6, #fff9ec);
+      padding: 2rem;
+      align-items: center;
+      gap: 2rem;
+    }
+    .hero img {
+      width: 400px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .hero-details {
+      flex: 1;
+    }
+    .hero-details h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #2f855a;
+    }
+    .hero-details p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 1rem;
+    }
+    .info-grid div {
+      margin: 0.25rem 0;
+    }
+    .story {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .story h2 {
+      margin-bottom: 1rem;
+    }
+    .story p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #4a5568;
+    }
+    .adopt-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: #38a169;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .adopt-btn:hover {
+      background: #2f855a;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <img src="../_app/assets/images/luna.avif" alt="Luna the dog">
+  <div class="hero-details">
+    <h1>Meet Luna 🐶</h1>
+    <p><strong>Breed:</strong> Golden Retriever</p>
+    <p><strong>Age:</strong> 2 years</p>
+    <p><strong>Gender:</strong> Female</p>
+    <p><strong>Good with:</strong> Kids, other pets</p>
+    <p><strong>Vaccinated:</strong> Yes</p>
+    <p><strong>Spayed/Neutered:</strong> Yes</p>
+    <a href="../adopt.html?pet=Luna" class="adopt-btn">Apply to Adopt Luna</a>
+  </div>
+</section>
+
+<section class="story">
+  <h2>Luna’s Journey</h2>
+  <p>
+    Luna’s life began on the streets, where she roamed cold and alone until a stormy night changed everything. Rescued by a kind soul during heavy rain, she was brought to our shelter soaked and shivering. With warm food and gentle care, she slowly started wagging her tail again.
+  </p>
+  <p>
+    Her sweet and calm nature soon shone through. She became a favorite among volunteers — especially with children, who she patiently plays with. She enjoys slow walks, warm blankets, and curling up with a good chew toy.
+  </p>
+  <p>
+    Luna is fully vaccinated and ready to find her forever home. If you're looking for a loyal friend with a gentle soul, Luna is waiting just for you.
+  </p>
+</section>
+   <div id="footer-placeholder"></div>
+<script>
+  fetch("../footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+</body>
+</html>
