@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../_app/css/main.css" />
   <title>Meet Our Pets - PawSome</title>
   <style>
     body {
@@ -113,7 +114,14 @@
   </style>
 </head>
 <body>
-
+   <div id="navbar-placeholder"></div>
+<script>
+  fetch("../nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
 <header>
   <h1>Meet Our Pets</h1>
   <p>Get to know their stories, personalities, and their journey so far 🐾</p>
@@ -121,7 +129,7 @@
 
 <section class="pet-stories">
   <div class="story-card">
-    <img src="../_app/assets/images/German-Shepherd-1.jpg" alt="Luna the dog">
+    <img src="../_app/assets/images/shutterstock_589527401-scaled-1-2048x1152.jpg" alt="Luna the dog">
     <div class="story-content">
       <h2>Luna</h2>
       <p>Luna was rescued from a stormy night, found cold and scared. Now, she's warm, safe, and incredibly affectionate. She's great with kids and loves belly rubs.</p>

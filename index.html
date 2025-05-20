@@ -5,31 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PawSome - Pet Adoption</title>
   <meta name="description" content="Adopt a pet today with PawSome. Dogs, cats, birds, and more – your new best friend is waiting!" />
-  <link rel="stylesheet" href="./_app/css/main.css" />
+  <link rel="stylesheet" href="./_app/css/base.css" />
   <script type="module" src="./_app/js/main.js"></script>
+ 
 </head>
 <body>
-<div id="navbar-placeholder"></div>
-<script>
-  fetch("nav.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("navbar-placeholder").innerHTML = data;
-    });
-</script>
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      });
+  </script>
 
   <main>
     <section class="hero">
       <h1 class="hero__title">Adopt, Don't Shop</h1>
       <p class="hero__subtitle">Thousands of lovable pets are waiting for a forever home.</p>
-      <a href="meet/index.html" class="hero__cta">🐶 Meet Our Pets</a>
+      <a href="meet/index.html" class="hero__cta ui-highlight-button">🐶 Meet Our Pets</a>
     </section>
 
     <section class="main__slideshow" aria-label="Featured Animals Slideshow">
       <div class="slideshow__container">
-        <img class="slide active" src="./_app/assets/images/chris-boyer-AtYvCtDcwn0-unsplash.jpg" alt="Dog 1" />
-        <img class="slide" src="./_app/assets/images/scottish-straight-cat-white-background-looking-up-top-view-copy-space-banner_76158-766.jpg" alt="Dog 2" />
-        <img class="slide" src="./_app/assets/images/dog1.jpeg" alt="Dog 3" />
+        <img class="slide active" src="./_app/assets/images/cover1.jpeg" alt="Dog 1" />
+        <img class="slide" src="./_app/assets/images/chris-boyer-atyvctdcwn0-unsplash.jpg" alt="Dog 2" />
+        <img class="slide" src="./_app/assets/images/cover.jpeg" alt="Dog 3" />
       </div>
       <div class="slideshow__dots">
         <span class="dot active"></span>
@@ -39,13 +40,15 @@
     </section>
   </main>
 
-    <div id="footer-placeholder"></div>
-<script>
-  fetch("../footer.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("footer-placeholder").innerHTML = data;
-    });
-</script>
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("../footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+ 
 </body>
 </html>

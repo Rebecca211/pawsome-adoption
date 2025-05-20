@@ -16,6 +16,14 @@ body { font-family: 'Segoe UI', sans-serif; background: #f7fdfa; margin: 0; colo
 .adopt-btn:hover { background: #01579b; }
 </style></head>
 <body>
+   <div id="navbar-placeholder"></div>
+<script>
+  fetch("../nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
 <section class="hero">
   <img src="../_app/assets/images/kiwi.jpg" alt="Kiwi the bird">
   <div class="hero-details">

@@ -16,8 +16,16 @@ body { font-family: 'Segoe UI', sans-serif; background: #f4fce3; margin: 0; colo
 .adopt-btn:hover { background: #558b2f; }
 </style></head>
 <body>
+     <div id="navbar-placeholder"></div>
+<script>
+  fetch("../nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
 <section class="hero">
-  <img src="../_app/assets/images/speedy.jpg" alt="Speedy the tortoise">
+  <img src="../_app/assets/images/speedy.png" alt="Speedy the tortoise">
   <div class="hero-details">
     <h1>Meet Speedy 🐢</h1>
     <p><strong>Breed:</strong> Russian Tortoise</p>

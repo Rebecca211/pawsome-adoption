@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Meet Luna - PawSome</title>
+  <link rel="stylesheet" href="../_app/css/main.css" />
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -76,7 +77,14 @@
   </style>
 </head>
 <body>
-
+   <div id="navbar-placeholder"></div>
+<script>
+  fetch("../nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
 <section class="hero">
   <img src="../_app/assets/images/luna.avif" alt="Luna the dog">
   <div class="hero-details">

@@ -3,48 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adopt Other Pets - PawSome</title>
-  <link rel="stylesheet" href="../_app/css/main.css" />
-
-  <style>
-    .pet-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-    }
-    .pet-card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 1rem;
-      text-align: center;
-    }
-    .pet-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .pet-card__btn {
-      margin: 0.5rem 0.25rem;
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      background: #38a169;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    h1 {
-      text-align: center;
-      margin: 2rem 0 1rem;
-      color: #2d3748;
-    }
-  </style>
-</head>
-<body>
-
+  <title>Adopt Birds - PawSome</title>
+<link rel="stylesheet" href="../_app/css/main.css" />
   <style>
     .pet-cards {
   display: grid;
@@ -113,18 +73,34 @@
     });
 </script>
   <main>
-    <h1>Adopt Other Pets</h1>
+    <h1>Adopt Cats</h1>
     <section class="pet-cards">
       
         <div class="pet-card">
-            <img src="../_app/assets/images/tortise.jpg" alt="Speedy">
-            <h3>Speedy</h3>
-            <p>Tortoise · 5 years · Male</p>
-            <a href="../adopt.html?pet=Speedy" class="pet-card__btn">Adopt Me</a>
-            <a href="/meet/pet-speedy.html" class="pet-card__btn" style="background:#2b6cb0;">Read Bio</a>
+            <img src="../_app/assets/images/scottish-straight-cat-white-background-looking-up-top-view-copy-space-banner_76158-766.jpg" alt="Cat">
+            <h3>Whisker</h3>
+            <p>Kitten · 1 year · Male</p>
+            <a href="/adopt.html?pet=whisker" class="pet-card__btn">Adopt Me</a>
+            <a href="/meet/pet-whisker.html" class="pet-card__btn" style="background:#2b6cb0;">Read Bio</a>
+        </div>
+                <div class="pet-card">
+            <img src="../_app/assets/images/chris-boyer-atyvctdcwn0-unsplash.jpg" alt="Cat">
+            <h3>Lily and Milly</h3>
+            <p>Kittens · 1 year · Male</p>
+            <a href="../adopt.html?pet=lillyandMilly" class="pet-card__btn">Adopt Me</a>
+            <a href="../meet/pet-LillyandMilly.html" class="pet-card__btn" style="background:#2b6cb0;">Read Bio</a>
         </div>
         
     </section>
   </main>
+     <div id="footer-placeholder"></div>
+<script>
+  fetch("../footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
 </body>
+
 </html>

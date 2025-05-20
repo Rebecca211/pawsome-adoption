@@ -76,7 +76,14 @@
   </style>
 </head>
 <body>
-
+   <div id="navbar-placeholder"></div>
+<script>
+  fetch("../nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
 <section class="hero">
   <img src="../_app/assets/images/cat" alt="Whisker the cat">
   <div class="hero-details">

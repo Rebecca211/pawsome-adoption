@@ -1,27 +1,104 @@
-html {
-	scroll-behavior: smooth;
-}
 
-body {
-	display: flex;
-	flex-flow: column;
-	min-height: 100vh;
-	background-color: var(--secondary);
-	-webkit-font-smoothing: antialiased;
-}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-h1 {
-	margin: 3rem auto;
-	padding: 0 1rem;
-	width: 100%;
-	font-size: 3.1rem;
-	font-weight: bold;
-	width: 100vw;
-	color: var(--tertiary);
-	text-shadow: 0 4px 4px var(--primary);
-	text-align: center;
-}
+    .hero {
+      text-align: center;
+      padding: 5rem 1rem;
+      background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+                  url('./_app/assets/images/hero-bg.jpg') no-repeat center center/cover;
+    }
 
-button {
-	cursor: pointer;
-}
+    .hero__title {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .hero__subtitle {
+      font-size: 1.5rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .ui-highlight-button {
+      background: linear-gradient(135deg, #ff914d, #ff5e62);
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 600;
+      padding: 0.85rem 1.5rem;
+      border: none;
+      border-radius: 2rem;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(255, 94, 98, 0.3);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .ui-highlight-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(255, 94, 98, 0.4);
+    }
+
+    .main__slideshow {
+      padding: 3rem 0;
+      background-color: #fafafa;
+    }
+
+    .slideshow__container {
+      display: flex;
+      overflow: hidden;
+      border-radius: 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .slide {
+      width: 100%;
+      display: none;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slideshow__dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      background-color: #ccc;
+      border-radius: 50%;
+      margin: 0 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .dot.active {
+      background-color: #08f93d;
+    }
+
+    @media (max-width: 768px) {
+      .hero__title {
+        font-size: 2.25rem;
+      }
+
+      .hero__subtitle {
+        font-size: 1.125rem;
+      }
+
+      .ui-highlight-button {
+        font-size: 1rem;
+        padding: 0.75rem 1.25rem;
+      }
+    }

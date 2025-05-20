@@ -53,14 +53,20 @@
       margin-top: 2rem;
       padding-top: 2rem;
       border-top: 1px solid #e2e8f0;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     input, textarea {
-      width: 100%;
+      width: 50%;
       padding: 0.7rem;
       margin-bottom: 1rem;
       border: 1px solid #cbd5e0;
       border-radius: 8px;
       font-size: 1rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     button {
       background-color: #38a169;
@@ -71,6 +77,9 @@
       border-radius: 30px;
       cursor: pointer;
       transition: background 0.3s ease;
+       display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     button:hover {
       background-color: #2f855a;
@@ -97,7 +106,7 @@
       <div class="benefit"><strong>💚 Feel Amazing:</strong> Few things match the joy of saving lives with your hands.</div>
     </div>
 
-    <h2 class="volunteer-form">Sign Up to Volunteer</h2>
+    <h2 class="volunteer-form" style="text-align: center;">Sign Up to Volunteer</h2>
     <form>
       <input type="text" placeholder="Full Name" required />
       <input type="email" placeholder="Email Address" required />
@@ -108,3 +117,26 @@
   </main>
 </body>
 </html>
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  let msg = document.getElementById('volunteer-success');
+  if (!msg) {
+    msg = document.createElement('div');
+    msg.id = 'volunteer-success';
+    msg.textContent = 'Thank you for signing up! Welcome to the PawSome volunteer community 🐾';
+    msg.style.background = '#f0fff4';
+    msg.style.color = '#276749';
+    msg.style.border = '1px solid #38a169';
+    msg.style.borderRadius = '8px';
+    msg.style.padding = '1rem';
+    msg.style.margin = '1.5rem auto';
+    msg.style.textAlign = 'center';
+    msg.style.maxWidth = '500px';
+    msg.style.fontSize = '1.2rem';
+    document.querySelector('form').parentNode.insertBefore(msg, document.querySelector('form').nextSibling);
+  }
+  this.reset();
+ 
+});
+</script>
