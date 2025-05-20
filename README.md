@@ -30,6 +30,7 @@ Main page slideshow displaying images of the animals and the pet adoption shelte
 https://github.com/madelenfoss/PawSome-pet-adoption
 
 **Website demo:**
+
 https://PawSomepetadoption.netlify.app
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a225b635-920d-4dfe-be13-0a327b0642c8/deploy-status)](https://app.netlify.com/sites/PawSomepetadoption/deploys)
